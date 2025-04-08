@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Traffic Prediction</h1>
+        <form id="prediction-form" enctype="multipart/form-data">
+            <label for="fileInput">Upload Traffic Data (CSV only):</label>
+            <div id="drop-zone" class="drop-zone">Drag & Drop CSV file here or Click to Upload</div>
+            <input type="file" id="fileInput" accept=".csv" style="display: none;">
+            <div id="file-name" class="file-name"></div>
+            <button type="submit">Predict</button>
+        </form>
+        
+        <div id="results-container" class="results-container" style="display: none;">
+            <h2>Prediction Results</h2>
+            <div class="results-grid">
+                <div class="result-column">
+                    <h3>Actual Values</h3>
+                    <div id="actual-traffic" class="result-item">
+                        <span class="label">Traffic Volume:</span>
+                        <span class="value">-</span>
+                    </div>
+                    <div id="actual-congestion" class="result-item">
+                        <span class="label">Congestion Level:</span>
+                        <span class="value">-</span>
+                    </div>
+                    <div id="actual-speed" class="result-item">
+                        <span class="label">Average Speed:</span>
+                        <span class="value">-</span>
+                    </div>
+                </div>
+                <div class="result-column">
+                    <h3>Predicted Values</h3>
+                    <div id="predicted-traffic" class="result-item">
+                        <span class="label">Traffic Volume:</span>
+                        <span class="value">-</span>
+                    </div>
+                    <div id="predicted-congestion" class="result-item">
+                        <span class="label">Congestion Level:</span>
+                        <span class="value">-</span>
+                    </div>
+                    <div id="predicted-speed" class="result-item">
+                        <span class="label">Average Speed:</span>
+                        <span class="value">-</span>
+                    </div>
+                    <img id="plot-image" style="display:none; max-width: 100%; margin-top: 20px;" />
+                </div>
+                <h4 style="margin-top: 20px;">Traffic Volume Plot</h4>
+                <img id="plot-traffic" style="display:none; max-width: 100%; margin-top: 10px;" />
+
+                <!-- 📉 Graph for Congestion Level and Speed -->
+                <h4 style="margin-top: 20px;">Congestion & Speed Plot</h4>
+                <img id="plot-congestion-speed" style="display:none; max-width: 100%; margin-top: 10px;" />
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

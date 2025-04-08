@@ -1,0 +1,53 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+env/
+venv/
+venvv/
+ENV/
+.venv/
+.venvv/
+.Python
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints
+
+# Environment variables
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Model and scaler files
+*.h5
+*.npy
+*.pkl
+*.joblib
+
+# Logs and db
+*.log
+*.db
+
+# CSV and data files
+*.csv
+
+# Compiled source
+*.o
+*.pyc
+*.pyo
+
+# Testing
+coverage.xml
+htmlcov/
+
+# Flask specific
+instance/
+*.sqlite
