@@ -18,8 +18,7 @@ This project predicts short-term traffic parameters using an LSTM (Long Short-Te
 ---
 
 ## 🗂️ Folder Structure
-
-project-root/ ├── model/ │ └── lstm_model_optimized.h5 # Trained LSTM model ├── scalar/ │ ├── X_scaler.npy # Feature scaler │ └── y_scaler.npy # Target scaler ├── static/ │ ├── style.css # CSS styles │ └── script.js # JavaScript logic ├── templates/ │ └── index.html # Frontend HTML ├── dataset/ # (Optional) Folder to include sample datasets ├── app.py # Flask app ├── requirements.txt # Python dependencies └── README.md # This file
+<pre> <code>```plaintext project-root/ ├── model/ │ └── lstm_model_optimized.h5 # Trained LSTM model ├── scalar/ │ ├── X_scaler.npy # Feature scaler │ └── y_scaler.npy # Target scaler ├── static/ │ ├── style.css # CSS styles │ └── script.js # JavaScript logic ├── templates/ │ └── index.html # Frontend HTML ├── dataset/ # (Optional) Folder to include sample datasets ├── app.py # Flask app ├── requirements.txt # Python dependencies └── README.md # This file ```</code> </pre>
 
 
 
@@ -48,6 +47,7 @@ pip install -r requirements.txt
 4. Run the Flask App
 
 python app.py
+'''
 
 🧠 How to Use
 
