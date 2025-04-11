@@ -18,64 +18,85 @@ This project predicts short-term traffic parameters using an LSTM (Long Short-Te
 ---
 
 ## 🗂️ Folder Structure
+project-root/<br>
+├── app.py                        # Flask app<br>
+├── requirements.txt              # Python dependencies<br>
+├── README.md                     # This file<br>
 
-project-root/ ├── model/ │ └── lstm_model_optimized.h5 # Trained LSTM model ├── scalar/ │ ├── X_scaler.npy # Feature scaler │ └── y_scaler.npy # Target scaler ├── static/ │ ├── style.css # CSS styles │ └── script.js # JavaScript logic ├── templates/ │ └── index.html # Frontend HTML ├── dataset/ # (Optional) Folder to include sample datasets ├── app.py # Flask app ├── requirements.txt # Python dependencies └── README.md # This file
+├── model/<br>
+│   └── lstm_model_optimized.h5   # Trained LSTM model<br>
 
+├── scalar/<br>
+│   ├── X_scaler.npy              # Feature scaler<br>
+│   └── y_scaler.npy              # Target scaler<br>
 
+├── static/<br>
+│   ├── style.css                 # CSS styles<br>
+│   └── script.js                 # JavaScript logic<br>
+
+├── templates/<br>
+│   └── index.html                # Frontend HTML<br>
+
+├── dataset/                      # (Optional) Sample datasets<br>
+
+├── src/                          # Source code for model handling<br>
+│   ├── preprocess.py             # Data preprocessing functions<br>
+│   ├── train_model.py            # LSTM model training script<br>
+│   └── evaluate_model.py         # Model evaluation and metrics<br>
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started<br>
 
-### 1. Clone the Repository
+### 1. Clone the Repository<br>
 
-```bash
-git clone https://github.com/your-username/traffic-prediction-lstm.git
-cd traffic-prediction-lstm
+git clone https://github.com/your-username/traffic-prediction-lstm.git<br>
+cd traffic-prediction-lstm<br>
 
 
-2. Create a Virtual Environment (Optional but Recommended)
+### 2. Create a Virtual Environment (Optional but Recommended)<br>
 
-python -m venv venv
-venv\Scripts\activate       # On Windows
-# or
-source venv/bin/activate    # On macOS/Linux
+python -m venv venv<br>
+venv\Scripts\activate       # On Windows<br>
+# or<br>
+source venv/bin/activate    # On macOS/Linux<br>
 
-3. Install Dependencies
+### 3. Install Dependencies<br>
 
-pip install -r requirements.txt
+pip install -r requirements.txt<br>
 
-4. Run the Flask App
+### 4. Run the Flask App<br>
 
 python app.py
+<br>
 
-🧠 How to Use
+🧠 How to Use<br>
 
-1.Upload a .csv file with your traffic data (at least 10 rows).
+1.Upload a .csv file with your traffic data (at least 10 rows).<br>
 
-2.The file must have the same columns and order as used during model training.
+2.The file must have the same columns and order as used during model training.<br>
 
-3.The app will return the predicted traffic volume, congestion level, and average speed.
+3.The app will return the predicted traffic volume, congestion level, and average speed.<br>
 
-⚠️ Important: Make sure the CSV column names and order match the trained dataset exactly. Preprocessing must follow the format used during model training.
+⚠️ Important: Make sure the CSV column names and order match the trained dataset exactly. Preprocessing must follow the format used during model training.<br>
 
 📊 Dataset Credit
+<br>
+The dataset used in this project was adapted from:<br>
 
-The dataset used in this project was adapted from:
+📎 Source: [Bangalore City Traffic Dataset – Kaggle](https://www.kaggle.com/datasets/preethamgouda/banglore-city-traffic-dataset/data)<br>
+📌 Author: Preetham Gouda<br>
 
-📎 Source: [Bangalore City Traffic Dataset – Kaggle](https://www.kaggle.com/datasets/preethamgouda/banglore-city-traffic-dataset/data)
-📌 Author: Preetham Gouda
+Credits to the original authors for providing the dataset.<br>
 
-Credits to the original authors for providing the dataset.
+✨ Acknowledgments<br>
+TensorFlow for deep learning<br>
 
-✨ Acknowledgments
-TensorFlow for deep learning
+Flask for the lightweight web server<br>
 
-Flask for the lightweight web server
+📬 Contact<br>
+Have feedback or questions?<br>
+Feel free to reach out at svishwasundar6@gmail.com<br>
 
-📬 Contact
-Have feedback or questions?
-Feel free to reach out at svishwasundar6@gmail.com
-
-⭐ Give a Star
-If you found this helpful, consider starring this repo to support the project!
+⭐ Give a Star<br>
+If you found this helpful, consider starring this repo to support the project!<br>
